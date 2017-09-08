@@ -51,33 +51,40 @@ table {
 /* Begin Site Styles */
 
 html {
-
+	font-size: 1.125em; /* 18px / 16px = 1.125em */
+	line-height: 1.222em; /*22px / 18px = 1.222em, or ~ 120% of the font size */
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	padding-left: 22px;
+	padding-right: 22px;
 }
 
 h1 {
- font-family: Helvetica;
- font-size: 1.6em;
- text-align: left;
+ font-size: 1.777em; /* 31.984px / 18px = 1.777em -- bridal */
+ line-height: 1.376em; /* 44px / 31.984px = 1.376em; two gridlines */
+ padding-bottom: .688em; /* 22px / 31.984px = one gridline */
+ font-family: Helvetica, Arial, sans-serif;
 }
 
 h2 {
- margin: 10px;
- padding: 8px 0px;
- text-align: left;
- font-family: Helvetica;
- font-size: 1.6em;
+	font-size: 1.333em; /* 23.994px / 18px = 1.333em */
+	line-height: 1.375em; /* 33px / 23.994px - 1.375em;
+		one and a half gridlines */
+	padding-bottom: .917em; /* 22px / 23.994px = one gridline */
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 img {
-	padding-top: 15px;
 	display: block;
 	margin: auto;
-	width: 100px
-
+	max-width: 100%;
+	padding-top: 22px;
 }
 
 p {
-	margin-top: 15px;
-	font-family: Helvetica;
 	font-size: 1.6em;
+	font-family: Helvetica, Arial, sans-serif;
+	padding-bottom: 1.222em; /* One empty gridline (22px) */
 }
