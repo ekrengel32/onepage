@@ -51,6 +51,8 @@ table {
 /* Begin Site Styles */
 
 html {
+	color: #222; /* Very dark shade of gray; background will appear black */
+	background-color: #F0F0F0; /* Very light shade of gray; text will appear white */
 	font-size: 1.125em; /* 18px / 16px = 1.125em */
 	line-height: 1.222em; /*22px / 18px = 1.222em, or ~ 120% of the font size */
 	text-rendering: optimizeLegibility;
@@ -71,15 +73,14 @@ h1 {
 
 h2 {
 	font-size: 1.333em; /* 23.994px / 18px = 1.333em */
-	line-height: 1.375em; /* 33px / 23.994px - 1.375em;
-		one and a half gridlines */
+	line-height: 1.375em; /* 33px / 23.994px - 1.375em; one and a half gridlines */
 	padding-bottom: .917em; /* 22px / 23.994px = one gridline */
 	font-family: Helvetica, Arial, sans-serif;
 }
 
 img {
 	display: block;
-	margin: auto;
+	margin-left: auto;
 	max-width: 100px;
 	padding-top: 22px;
 	padding-bottom: 22px;
@@ -87,8 +88,7 @@ img {
 
 p {
 	font-size: 1.333em; /* 23.994px / 18px = 1.333em */
-	line-height: 1.375em; /* 33px / 23.994px - 1.375em;
-		one and a half gridlines */
+	line-height: 1.375em; /* 33px / 23.994px - 1.375em; one and a half gridlines */
 	font-family: Helvetica, Arial, sans-serif;
 	padding-bottom: 1.222em; /* One empty gridline (22px) */
 }
