@@ -80,7 +80,7 @@ h2 {
 img {
 	box-sizing: border-box;
 	display: block;
-	max-width: 100%;
+	max-width: 100px;
 	padding-top: 22px;
 	padding-bottom: 22px;
 }
