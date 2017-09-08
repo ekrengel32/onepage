@@ -68,6 +68,14 @@ h2 {
  font-size: 1.6em;
 }
 
+img {
+	padding-top: 15px
+	display: block;
+	margin: auto;
+	width: 100px
+
+}
+
 p {
  font-family: Helvetica;
  font-size: 1.6em;
