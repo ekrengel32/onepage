@@ -77,6 +77,7 @@ img {
 }
 
 p {
- font-family: Helvetica;
- font-size: 1.6em;
+	margin-top: 15px
+	font-family: Helvetica;
+	font-size: 1.6em;
 }
