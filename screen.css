@@ -57,6 +57,7 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	padding-top: 22px;
 	padding-left: 22px;
 	padding-right: 22px;
 }
@@ -77,10 +78,11 @@ h2 {
 }
 
 img {
+	box-sizing: border-box;
 	display: block;
-	margin: auto;
 	max-width: 100%;
 	padding-top: 22px;
+	padding-bottom: 22px;
 }
 
 p {
