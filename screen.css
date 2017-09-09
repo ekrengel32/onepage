@@ -83,7 +83,7 @@ h2 {
 
 img {
 	display: block;
-	margin-right: auto;
+	margin: auto;
 	max-width: 176px;
 	padding-top: 22px;
 	padding-bottom: 22px;
