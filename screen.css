@@ -65,17 +65,12 @@ html {
 	padding-right: 22px;
 }
 
-@media screen and (min-width: 980px);
-html {
-	width: 980px; /* 980px x 100% = 735px */
-	margin: auto;
-
 h1 {
  font-size: 1.777em; /* 31.984px / 18px = 1.777em -- bridal */
  line-height: 1.376em; /* 44px / 31.984px = 1.376em; two gridlines */
  padding-bottom: .688em; /* 22px / 31.984px = one gridline */
  font-family: Helvetica, Arial, sans-serif;
- border-bottom: 1px solid black;
+ border-bottom: 1px black;
  text-align: center;
 }
 
