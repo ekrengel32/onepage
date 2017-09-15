@@ -93,7 +93,7 @@ figcaption {
 	line-height: 1.222em; /* 33px / 23.994px - 1.375em; one and a half gridlines */
 	font-family: Helvetica, Arial, sans-serif;
 	padding-bottom: 1.222em; /* One empty gridline (22px) */
-	margin:auto;
+	text-align: center;
 }
 
 p {
