@@ -49,6 +49,7 @@ table {
 
 /* End Reset CSS */
 /* Begin Site Styles */
+/* Base Styles */
 
 html {
 	color: #222; /* Very dark shade of gray; background will appear black */
@@ -63,6 +64,14 @@ html {
 	padding-top: 22px;
 	padding-left: 22px;
 	padding-right: 22px;
+}
+
+/* Layout Styles*/
+/* ID selectors (major landmark/global html structures) */
+
+#header {
+/* Layout styles go here */
+
 }
 
 h1 {
@@ -81,6 +90,27 @@ h2 {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
+/*Modular Styles */
+/* Class selectors, sometimes descendent child selectors repeating styles
+/* throughout a site/page */
+
+.agenda {
+	/* Repeating Styles */
+
+}
+.agenda > li {
+
+}
+
+/* State Styles */
+/* JavaScript or media-query dependent styles */
+@media screen and (min-width:680px) {
+	#main {
+		width: 80%;
+	}
+}
+
+/* Responsive Images */
 img {
 	display: block;
 	margin: auto;
