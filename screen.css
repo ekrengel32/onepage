@@ -104,6 +104,32 @@ p {
 /* Layout Styles*/
 /* ID selectors (major landmark/global html structures) */
 
+#navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#navigation li {
+  float:left;
+  width: 33.333333%;
+}
+
+
+/* Modular */
+
+nav ul{
+  list-style-type: none;
+}
+nav a {
+  display: block;
+  padding-top: 0.611em; /* 11 / 18 = .611 */
+  padding-bottom: 0.611em; /* 11 / 18 = .611 */
+  background-color: grey;
+  text-align: center;
+  text-decoration: none;
+}
+
 
 /*Modular Styles */
 /* Class selectors, sometimes descendent child selectors repeating styles
@@ -119,47 +145,71 @@ p {
 
 /* State Styles */
 /* JavaScript or media-query dependent styles */
-@media screen and (min-width:680px) {
-	#about_me {
-		width: 80%;
+
+	@media screen and (min-width: 320px) {
+	  body {
+	    padding-right: 6.875%; /* 22 / 320 = 0.06875 */
+	    padding-right: 6.875%; /* 22 / 320 = 0.06875 */
+	  }
 	}
-}
+	@media screen and (min-width: 480px) {
+	  body {
+			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 */
+			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 **/
+	  }
+	}
+	@media screen and (min-width: 600px) {
+		body {
+			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 */
+			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 **/
+		}
+	}
+	@media screen and (min-width: 768px) {
+		body {
+			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 */
+			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 **/
+		}
+	}
+	@media screen and (min-width: 1024px) {
+	/*
+	  920px / whole screen
+	  60px / margins (total)
+	  270px / column
+	  25px / gutter
+	  Left-hand column: 270 * 2 + 25 = 565
+	  Right-hand column: 270 * 2 + 25 = 565
+	*/
+	  body {
+	    padding-right: 3.2608696%; /* 30 / 920 = 0.032608696 */
+	    padding-left: 3.2608696%; /* 30 / 920 = 0.032608696 */
+	  }
+	  #primary {
+	    width: 65.697674; /* 565 / 860 = 0.65697674 */
+	    float: left;
+	  }
+	  #supporting {
+	    width: 31.395349%; /* 270 / 860 = 0.31395349 */
+	    margin-left: 2.906977%; /* 25 / 860 = 0.02906977 */
+	    float:left;
+	  }
+	  #footer {
+	      clear: both;
+	      float: none;
+	  }
+	}
+
 
 /* Responsive Images */
+
 img {
 	display: block;
 	max-width: 198px;
 	padding-top: 22px;
-padding-bottom: 0.611em; /* 11 / 22 = 0.611 One-half empty gridline (11px) */
+	padding-bottom: 0.611em; /* 11 / 22 = 0.611 One-half empty gridline (11px) */
 }
 figcaption {
 	font-size: 1em; /* 23.994px / 18px = 1.333em */
 	line-height: 1.222em; /* 33px / 23.994px - 1.375em; one and a half gridlines */
 	font-family: Helvetica, Arial, sans-serif;
 	padding-bottom: 1.222em; /* 22 / 18 = 1.222 One-half empty gridline (22px) */
-}
-
-
-/* Layout */
-#navigation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-#navigation li {
-  float:left;
-  width: 33.333333%;
-}
-/* Modular */
-nav ul{
-  list-style-type: none;
-}
-nav a {
-  display: block;
-  padding-top: 0.611em; /* 11 / 18 = .611 */
-  padding-bottom: 0.611em; /* 11 / 18 = .611 */
-  background-color: grey;
-  text-align: center;
-  text-decoration: none;
 }
