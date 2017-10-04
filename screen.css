@@ -47,8 +47,12 @@ table {
 	border-spacing: 0;
 }
 
+
 /* End Reset CSS */
+
+
 /* Begin Site Styles */
+
 /* Base Styles */
 
 html {
@@ -66,29 +70,40 @@ html {
 	padding-right: 22px;
 }
 
-/* Layout Styles*/
-/* ID selectors (major landmark/global html structures) */
+body {
+  padding-top: 3.666em; /* 66 / 18 = 3.666 */
+  padding-right: 1.222em; /* 22 / 18 = 1.222 */
+  padding-left: 1.222em; /* 22 / 18 = 1.222 */
+}
 
-#header {
-/* Layout styles go here */
-
+h1,h2,h3,p {
+  padding-bottom: 1.222em; /* 22 / 18 = 1.222 one gridline */
 }
 
 h1 {
  font-size: 1.777em; /* 31.984px / 18px = 1.777em -- bridal */
  line-height: 1.376em; /* 44px / 31.984px = 1.376em; two gridlines */
- padding-bottom: .688em; /* 22px / 31.984px = one gridline */
+ padding-bottom: 0; /* 22px / 31.984px = 0.688 one gridline */
  font-family: Helvetica, Arial, sans-serif;
- border-bottom: 1px double black;
- text-align: center;
+ text-align: left;
 }
 
 h2 {
 	font-size: 1.333em; /* 23.994px / 18px = 1.333em */
 	line-height: 1.375em; /* 33px / 23.994px - 1.375em; one and a half gridlines */
-	padding-bottom: .917em; /* 22px / 23.994px = one gridline */
+	padding-bottom: 0; /* 22px / 23.994px = .917 one gridline */
 	font-family: Helvetica, Arial, sans-serif;
 }
+
+p {
+	font-size: 1.333em; /* 23.994px / 18px = 1.333em */
+	line-height: 1.375em; /* 33px / 23.994px - 1.375em; one and a half gridlines */
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Layout Styles*/
+/* ID selectors (major landmark/global html structures) */
+
 
 /*Modular Styles */
 /* Class selectors, sometimes descendent child selectors repeating styles
@@ -126,9 +141,27 @@ figcaption {
 	text-align: center;
 }
 
-p {
-	font-size: 1.333em; /* 23.994px / 18px = 1.333em */
-	line-height: 1.375em; /* 33px / 23.994px - 1.375em; one and a half gridlines */
-	font-family: Helvetica, Arial, sans-serif;
-	padding-bottom: 1.222em; /* One empty gridline (22px) */
+
+/* Layout */
+#navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#navigation li {
+  float:left;
+  width: 33.333333%;
+}
+/* Modular */
+nav ul{
+  list-style-type: none;
+}
+nav a {
+  display: block;
+  padding-top: 0.611em; /* 11 / 18 = .611 */
+  padding-bottom: 0.611em; /* 11 / 18 = .611 */
+  background-color: grey;
+  text-align: center;
+  text-decoration: none;
 }
