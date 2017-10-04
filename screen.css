@@ -128,17 +128,15 @@ p {
 /* Responsive Images */
 img {
 	display: block;
-	margin: auto;
 	max-width: 198px;
 	padding-top: 22px;
-	padding-bottom: 22px;
+padding-bottom: 0.611em; /* 11 / 22 = 0.611 One-half empty gridline (11px) */
 }
 figcaption {
 	font-size: 1em; /* 23.994px / 18px = 1.333em */
 	line-height: 1.222em; /* 33px / 23.994px - 1.375em; one and a half gridlines */
 	font-family: Helvetica, Arial, sans-serif;
-	padding-bottom: 1.222em; /* One empty gridline (22px) */
-	text-align: center;
+	padding-bottom: 1.222em; /* 22 / 18 = 1.222 One-half empty gridline (22px) */
 }
 
 
