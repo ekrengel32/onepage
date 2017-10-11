@@ -69,7 +69,7 @@ html {
 }
 
 body {
-  padding-top: 3.666em; /* 66 / 18 = 3.666 */
+  padding-top: 2.444em; /* 66 / 18 = 3.666 */
   padding-right: 1.222em; /* 22 / 18 = 1.222 */
   padding-left: 1.222em; /* 22 / 18 = 1.222 */
 }
@@ -79,28 +79,31 @@ h1,h2,h3,p {
 }
 
 h1 {
- font-size: 1.777em; /* 31.984px / 18px = 1.777em -- bridal */
+ font-size: 1.688em; /* 31.984px / 18px = 1.777em -- bridal */
  line-height: 1.376em; /* 44px / 31.984px = 1.376em; two gridlines */
  padding-bottom: 0; /* 22px / 31.984px = 0.688 one gridline */
  text-align: left;
 }
 
 h2 {
-	font-size: 1.333em; /* 23.994px / 18px = 1.333em */
-	line-height: 1.375em; /* 33px / 23.994px - 1.375em; one and a half gridlines */
+	font-size: 1.125em; /* 18px / 16px = 1.125em */
+	line-height: 1.222em; /* 22 / 18 = 1.222 */
 	padding-bottom: 0; /* 22px / 23.994px = .917 one gridline */
 }
 
 p {
-	font-size: 1.333em; /* 23.994px / 18px = 1.333em */
-	line-height: 1.375em; /* 33px / 23.994px - 1.375em; one and a half gridlines */
+	font-size: 1.125em; /* 18px / 16px = 1.125em */
+	line-height: 1.222em; /* 22 / 18 = 1.222 */
 }
 
 /* Layout Styles*/
 /* ID selectors (major landmark/global html structures) */
 
-#navigation {
-  position: absolute;
+.flexbox #content {
+	display: flex;
+	}
+	#navigation {
+  position:absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -109,7 +112,15 @@ p {
   float:left;
   width: 33.333333%;
 }
-
+.flexbox #navigation {
+	position: static;
+}
+.flexbox #navigation {
+	display: flex;
+}
+.flexbox #navigation {
+	float: none;
+}
 
 /* Modular */
 
@@ -151,27 +162,9 @@ nav a {
 
 	@media screen and (min-width: 320px) {
 	  body {
-	    padding-right: 6.875%; /* 22 / 320 = 0.06875 */
+	    padding-left: 6.875%; /* 22 / 320 = 0.06875 */
 	    padding-right: 6.875%; /* 22 / 320 = 0.06875 */
 	  }
-	}
-	@media screen and (min-width: 480px) {
-	  body {
-			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 */
-			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 **/
-	  }
-	}
-	@media screen and (min-width: 600px) {
-		body {
-			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 */
-			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 **/
-		}
-	}
-	@media screen and (min-width: 768px) {
-		body {
-			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 */
-			padding-right: 6.470588%; /* 22 / 340 = 0.06470588 **/
-		}
 	}
 	@media screen and (min-width: 920px) {
 	/*
@@ -195,6 +188,11 @@ nav a {
 	    margin-left: 2.906977%; /* 25 / 860 = 0.02906977 */
 	    float:left;
 	  }
+.cssgrid #content {
+	display: grid;
+}
+
+
 	  #footer {
 	      clear: both;
 	      float: none;
@@ -206,7 +204,8 @@ nav a {
 
 img {
 	display: block;
-	max-width: 198px;
+/* make new images for responsive design at specific dimensions */
+	max-width: 220px;
 	padding-top: 22px;
 	padding-bottom: 0.611em; /* 11 / 22 = 0.611 One-half empty gridline (11px) */
 }
