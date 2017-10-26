@@ -94,6 +94,7 @@ h2 {
 p {
 	font-size: 1.125em; /* 18px / 16px = 1.125em */
 	line-height: 1.222em; /* 22 / 18 = 1.222 */
+	padding-bottom: 1.2223em;
 }
 
 /* Layout Styles */
@@ -110,7 +111,12 @@ p {
   float:left;
   width: 25%;
 }
-
+.flexbox #navigation ul {
+	display: flex;
+}
+.flexbox #navigation li {
+	float: none;
+}
 
 /* Modular Styles */
 /* Class selectors, sometimes descendent child selectors repeating styles throughout a site/page */
@@ -158,28 +164,45 @@ p {
 	}
 	@media screen and (min-width: 920px) {
 	/*
-	  920px / whole screen
+	  2-column grid for viewports larger than 920px
+		920px / whole screen
 	  60px / margins (total)
-	  270px / column
-	  25px / gutter
-	  Left-hand column: 270 * 2 + 25 = 565
-	  Right-hand column: 270 * 2 + 25 = 565
+	  40px / gutter
+		860px / content-width
+		410px / column width
 	*/
 	  body {
-	    padding-right: 3.2608696%; /* 30 / 920 = 0.032608696 */
-	    padding-left: 3.2608696%; /* 30 / 920 = 0.032608696 */
+	    padding-right: 4.347826%; /* 40 / 920 = 0.04347826 */
+	    padding-left: 4.347826%; /* 40 / 920 = 0.04347826 */
 	  }
-	  #primary {
-	    width: 65.697674; /* 565 / 860 = 0.65697674 */
+	  .primary {
+	    width: 47.6744186%; /* 410 / 860 = 0.476744186 */
 	    float: left;
 	  }
-	  #supporting {
-	    width: 31.395349%; /* 270 / 860 = 0.31395349 */
-	    margin-left: 2.906977%; /* 25 / 860 = 0.02906977 */
-	    float:left;
-	  }
-.cssgrid #content {
-	display: grid;
+		.primary:nth-of-type(2n){{
+			float: none;
+			margin-left: 52.3255814% /* 450 / 860 = 0.523255814 */
+		}
+		.content {
+			float: left;
+		}
+		.flexbox .content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.flexbox .primary {
+			float: none;
+			margin-left: 0;
+		}
+		.cssgrid .content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 4.6511627% /* 40 / 860 = 0.046511627 */
+		}
+		.cssgrid .primary {
+			width: auto;
+		}
 }
 
 
@@ -187,7 +210,6 @@ p {
 	      clear: both;
 	      float: none;
 	  }
-	}
 
 
 /* Responsive Images */
