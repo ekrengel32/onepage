@@ -52,6 +52,11 @@ table {
 
 /* Begin Site Styles */
 
+/* 18px base body text */
+/* 22px baseline grid */
+/* Golden Section modular scale: 1.618 */
+/* ^^ architecture nerd */
+
 /* Base Styles */
 
 html {
@@ -64,37 +69,43 @@ html {
 	font-size: 1.125em; /* 18px / 16px = 1.125em */
 	line-height: 1.222em; /*22px / 18px = 1.222em, or ~ 120% of the font size */
 	font-family: Helvetica, Arial, sans-serif;
+	text-align: left;
 	color: #222; /* Very dark shade of gray; background will appear black */
 	background-color: #F0F0F0; /* Very light shade of gray; text will appear white */
 }
 
 body {
-  padding-top: 2.444em; /* 66 / 18 = 3.666 */
-  padding-right: 1.222em; /* 22 / 18 = 1.222 */
-  padding-left: 1.222em; /* 22 / 18 = 1.222 */
+	padding-top: 2.444em; /* 44px / 18px = 2.444em two gridlines */
+	padding-left: 1.222em; /* 22px / 18px = 1.222 */
+  padding-right: 1.222em; /* 22px / 18px = 1.222 */
 }
 
-h1,h2,h3,p {
-  padding-bottom: 1.222em; /* 22 / 18 = 1.222 one gridline */
+p, ul {
+  padding-bottom: 1.222em; /* 22px / 18px = 1.222 one gridline */
+}
+
+ul {
+	list-style-type: none;
 }
 
 h1 {
- font-size: 1.688em; /* 31.984px / 18px = 1.777em -- bridal */
- line-height: 1.376em; /* 44px / 31.984px = 1.376em; two gridlines */
- padding-bottom: 0; /* 22px / 31.984px = 0.688 one gridline */
- text-align: left;
+ font-size: 2.618em; /* 47.123px / 18px = 2.618em -- GS */
+ line-height: 1.222em; /* 22px / 18px = 1.222em; one gridline */
 }
 
 h2 {
-	font-size: 1.125em; /* 18px / 16px = 1.125em */
-	line-height: 1.222em; /* 22 / 18 = 1.222 */
-	padding-bottom: 0; /* 22px / 23.994px = .917 one gridline */
+	font-size: 2.618em; /* 47.123px / 18px = 2.618em -- GS */
+	line-height: 1.833em; /* 33px / 18px = 1.833em; one and a half gridlines */
+}
+
+h3 {
+ font-size: 1.618em; /* 29.124px / 18px = 1.618em -- GS */
+ line-height: 1.222em; /* 22px / 18px = 0.755em; one gridlines */
 }
 
 p {
-	font-size: 1.125em; /* 18px / 16px = 1.125em */
-	line-height: 1.222em; /* 22 / 18 = 1.222 */
-	padding-bottom: 1.2223em;
+	font-size: 1.125em; /* 18px / 16px = 1.125em -- GS */
+	line-height: 1.222em; /* 22px / 18px = 1.222em; one gridline */
 }
 
 /* Layout Styles */
@@ -118,6 +129,13 @@ p {
 	float: none;
 }
 
+.flexbox #header {
+	display: flex;
+	flex-direction: column;
+	justify-content:space-evenly;
+}
+
+
 /* Modular Styles */
 /* Class selectors, sometimes descendent child selectors repeating styles throughout a site/page */
 
@@ -125,7 +143,6 @@ p {
 #navigation a {
 	display: block;
   padding-top: 0.611em; /* 11 / 18 = .611 */
-  padding-bottom: 0.611em; /* 11 / 18 = .611 */
 	color: #585959;
 	text-transform:uppercase;
 	text-align: center;
@@ -138,17 +155,15 @@ p {
   list-style-type: none;
 }
 
-.agenda {
-	/* Repeating Styles */
-
-}
-.agenda > li {
-
-}
-
 /* State Styles */
 /* JavaScript or media-query dependent styles */
 
+@media screen and (min-width: 280px) {
+	body {
+		padding-left: 6.875%; /* 22px / 320px = 0.06875 */
+		padding-right: 6.875%; /* 22px / 320px = 0.06875 */
+	}
+}
 
 @media screen and (min-width: 480px) {
 	#navigation a {
@@ -156,12 +171,13 @@ p {
 	}
 }
 
-	@media screen and (min-width: 320px) {
-	  body {
-	    padding-left: 6.875%; /* 22 / 320 = 0.06875 */
-	    padding-right: 6.875%; /* 22 / 320 = 0.06875 */
-	  }
+	@media screen and (min-width: 720px) {
+		h1 {
+			font-size: 4.236em; /* 76.244px / 18px = 4.236em -- GS */
+			line-height: 1.833em; /* 33px / 18px = 1.833em; one and a half gridlines */
+		}
 	}
+
 	@media screen and (min-width: 920px) {
 	/*
 	  2-column grid for viewports larger than 920px
@@ -179,7 +195,7 @@ p {
 	    width: 47.6744186%; /* 410 / 860 = 0.476744186 */
 	    float: left;
 	  }
-		.primary:nth-of-type(2n){{
+		.primary:nth-of-type(2n){
 			float: none;
 			margin-left: 52.3255814% /* 450 / 860 = 0.523255814 */
 		}
@@ -205,7 +221,6 @@ p {
 		}
 }
 
-
 	  #footer {
 	      clear: both;
 	      float: none;
@@ -218,12 +233,11 @@ img {
 	display: block;
 /* make new images for responsive design at specific dimensions */
 	max-width: 220px;
-	padding-top: 22px;
 	padding-bottom: 0.611em; /* 11 / 22 = 0.611 One-half empty gridline (11px) */
 }
 figcaption {
-	font-size: 1em; /* 23.994px / 18px = 1.333em */
-	line-height: 1.222em; /* 33px / 23.994px - 1.375em; one and a half gridlines */
+	font-size: 1em; /* 18px / 18px = 1em */
+	line-height: 1.222em; /* 22px / 18px - 1.222em; one gridlines */
 	font-family: Helvetica, Arial, sans-serif;
-	padding-bottom: 1.222em; /* 22 / 18 = 1.222 One-half empty gridline (22px) */
+	padding-bottom: 1.222em; /* 22px / 18px = 1.222 one gridline */
 }
